@@ -52,20 +52,21 @@ if (npcSelection === playerSelection) {
         if (npcSelection === "r") {
             win = true;
         }
-    }
-    else {
+    } else if (playerSelection === "s") {
         player = "Scissors";
         if (npcSelection === "p") {
             win = true;
         }
+    } else {
+        displayHtml += "Please enter Rock, Paper, or Scissors! <br/>";
     }
 }
 
 if (win) {
-    displayHtml += "You win!"
+    displayHtml += "<strong>You win!</strong>"
 } else {
     if(npcSelection !== playerSelection) {
-        displayHtml += "You lose!"
+        displayHtml += "<strong>You lose!</strong>"
     }
     
 }
